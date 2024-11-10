@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editable Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="resume-container" id="resume">
+    <!-- Sidebar with Profile Information -->
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+      </div>
+      <h1 class="editable-block" contenteditable="true">Type your name</h1>
+      <p class="editable-block job-title" contenteditable="true">Type your job title</p>
+      <p class="editable-block" contenteditable="true">Type your email</p>
+      <p class="editable-block" contenteditable="true">Type your phone number</p>
+      <p class="editable-block" contenteditable="true">Type your location</p>
+    </aside>
+
+    <!-- Main Content with Editable Sections -->
+    <main class="main-content">
+      <!-- Summary Section -->
+      <section class="section summary">
+        <h2>Summary</h2>
+        <p class="editable-block" contenteditable="true">
+          Type a brief summary about yourself.
+        </p>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="section experience">
+        <h2>Experience</h2>
+        <div class="job">
+          <h3 class="editable-block" contenteditable="true">Type your job title</h3>
+          <span class="editable-block company" contenteditable="true">Type your company name</span> 
+          <span class="editable-block duration" contenteditable="true">Type employment dates</span>
+          <ul>
+            <li class="editable-block" contenteditable="true">Describe your responsibilities or achievements.</li>
+            <li class="editable-block" contenteditable="true">Describe another responsibility or achievement.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section class="section education">
+        <h2>Education</h2>
+        <div class="education-entry">
+          <h3 class="editable-block" contenteditable="true">Type your degree</h3>
+          <span class="editable-block institution" contenteditable="true">Type your institution name, graduation year</span>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section skills">
+        <h2>Skills</h2>
+        <ul class="skill-list">
+          <li class="editable-block" contenteditable="true">Type a skill</li>
+          <li class="editable-block" contenteditable="true">Type another skill</li>
+          <li class="editable-block" contenteditable="true">Add more skills</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- Buttons for PDF Generation and Download -->
+  <div class="button-container">
+    <button onclick="generatePDF()">Generate PDF</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
